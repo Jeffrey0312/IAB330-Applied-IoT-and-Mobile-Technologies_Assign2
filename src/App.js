@@ -35,7 +35,7 @@ function myApp() {
       </div>
       <header className="App-header">
         < img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="J" />
+        <Welcome name="Assignment 2" />
         {introtext}
       </header>
     </div>
