@@ -2,7 +2,7 @@ import React from 'react';
 import CDB from '../services/CDB';
 import { LineChart, Line } from 'recharts';
 
-export default class extends Component {
+export default class {
     state = {
         w12Docs: [],
         w12Doc: [],
@@ -47,7 +47,7 @@ export default class extends Component {
         const mydoc = this.getOneDocument();
 
         const renderLineChart = (
-            <LineChart width={400} height={400} data={dummydata}>
+            <LineChart width={400} height={400} >
                 <Line type="monotone" dataKey="iab330" stroke="#8884d8" />
             </LineChart>
         );

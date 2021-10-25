@@ -7,7 +7,7 @@ const username = process.env.REACT_APP_CLOUDANT_USERNAME
 const password = process.env.REACT_APP_CLOUDANT_PASSWORD
 
 //base64 encoded username password creates authkey
-const authKeyEncode = encoded(`${username}:${password}`)
+const authKeyEncode = encode(`${username}:${password}`)
 
 export default axios.create({
     baseURL: `${cloudantDBURL}`,

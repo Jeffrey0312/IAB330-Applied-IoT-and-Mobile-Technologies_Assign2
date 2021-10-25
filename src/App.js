@@ -10,6 +10,8 @@ import {
 
 import Home from './components/Home';
 import About from './components/About';
+import Educator from "./components/Educator";
+
 
 function Welcome(props) {
   return <h1>Hi, {props.name}</h1>;
@@ -30,12 +32,13 @@ function myApp() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
+            <Route path="/com" component={Educator} />
           <Route component={Home} />
         </Switch>
       </div>
       <header className="App-header">
         < img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="Assignment 2" />
+        <Welcome name="Assignment 2122" />
         {introtext}
       </header>
     </div>
