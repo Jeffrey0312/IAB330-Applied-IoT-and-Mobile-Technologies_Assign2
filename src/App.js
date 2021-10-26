@@ -12,12 +12,11 @@ import Home from './components/Home';
 import About from './components/About';
 import Educator from "./components/Educator";
 
-
 function Welcome(props) {
   return <h1>Hi, {props.name}</h1>;
 }
 
-const introtext = <h1>IAB330 Assignment 2</h1>;
+const introtext = <h1>IAB330 Assignment 2.</h1>;
 
 function myApp() {
   return (
@@ -26,19 +25,20 @@ function myApp() {
         <ul>
           <li> <Link to="/">Home</Link> </li>
           <li> <Link to="/about">About</Link> </li>
+          <li> <Link to="/educator">Educator</Link> </li>
         </ul>
       </div>
       <div className="App-intro">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-            <Route path="/com" component={Educator} />
+          <Route path="/educator" component={Educator} />
           <Route component={Home} />
         </Switch>
       </div>
       <header className="App-header">
         < img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="Assignment 2122" />
+        <Welcome name="J" />
         {introtext}
       </header>
     </div>
