@@ -2,8 +2,7 @@ import React from "react";
 
 const Home = () => (
     <div>
-        <h2>Home</h2>
-        This is the home page component!
+        <h2>Hi BNE F5</h2>
     </div>
 );
 

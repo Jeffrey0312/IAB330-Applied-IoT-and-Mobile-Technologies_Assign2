@@ -1,48 +1,40 @@
 import React from "react";
-import logo from './logo.svg';
 import './App.css';
 import {
-  Route,
-  Link,
-  Switch,
-  Redirect
+    Route,
+    Link,
+    Switch,
 } from "react-router-dom";
-
+import {Container, Nav, Navbar} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
-import About from './components/About';
-import Educator from "./components/Educator";
-
-function Welcome(props) {
-  return <h1>Hi, {props.name}</h1>;
-}
-
-const introtext = <h1>IAB330 Assignment 2.</h1>;
+import Doctor from "./components/Doctor";
 
 function myApp() {
-  return (
-    <div className="App">
-      <div className="menu">
-        <ul>
-          <li> <Link to="/">Home</Link> </li>
-          <li> <Link to="/about">About</Link> </li>
-          <li> <Link to="/educator">Educator</Link> </li>
-        </ul>
-      </div>
-      <div className="App-intro">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/educator" component={Educator} />
-          <Route component={Home} />
-        </Switch>
-      </div>
-      <header className="App-header">
-        < img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="J" />
-        {introtext}
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navbar bg="info" expand="lg">
+                <Container>
+                    {/*<Navbar.Toggle aria-controls="basic-navbar-nav"/>*/}
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/Doctor">Doctor</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+            <div className="App-intro">
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/Doctor" component={Doctor}/>
+                    <Route component={Home}/>
+                </Switch>
+            </div>
+
+
+        </div>
+    );
 }
 
 export default myApp;
