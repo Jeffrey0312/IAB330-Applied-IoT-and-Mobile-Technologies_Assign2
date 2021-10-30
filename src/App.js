@@ -9,6 +9,7 @@ import {Container, Nav, Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import Doctor from "./components/Doctor";
+import Showdata from "./components/showData";
 
 function myApp() {
     return (
@@ -20,6 +21,7 @@ function myApp() {
                         <Nav className="me-auto">
                             <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/Doctor">Doctor</Nav.Link>
+                            <Nav.Link href="/showData">Showdata</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -28,6 +30,7 @@ function myApp() {
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/Doctor" component={Doctor}/>
+                    <Route path="/showData" component={Showdata}/>
                     <Route component={Home}/>
                 </Switch>
             </div>
