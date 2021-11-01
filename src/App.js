@@ -24,7 +24,7 @@ function myApp() {
               <Nav.Link href="/">
                 <h4>Home</h4>
               </Nav.Link>
-              <Nav.Link href="/RoomVisualization">
+              <Nav.Link href="/">
                 <h4>Room Visualization</h4>
               </Nav.Link>
             </Nav>
@@ -34,7 +34,7 @@ function myApp() {
       <div className="App-intro">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/RoomVisualization" component={RoomVisualization} />
+          <Route path="/Visualisation" component={RoomVisualization} />
           <Route component={Home} />
         </Switch>
       </div>

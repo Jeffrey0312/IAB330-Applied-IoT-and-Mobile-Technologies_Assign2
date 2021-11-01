@@ -6,7 +6,7 @@ import "../index.css";
 export default function Home() {
   const history = useHistory();
   const handleRouter = () => {
-    history.push("/RoomVisualization");
+    history.push("/Visualisation");
   };
 
   return (
